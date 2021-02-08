@@ -1,4 +1,5 @@
 #include "Assets.h"
+#include "Tile.h"
 
 sf::Texture Assets::menuTexture; sf::Texture Assets::menuTexture2; sf::Texture Assets::blankTexture; sf::Texture Assets::point;
 sf::Texture Assets::rightWallTexture; sf::Texture Assets::leftWallTexture; sf::Texture Assets::midWallTexture; sf::Texture Assets::backgroundTexture;
@@ -161,4 +162,18 @@ void Assets::Init()
 	fourthLevel.setTexture(fourthLevelTexture);
 	fourthLevelLeft.setTexture(fourthLevelTextureLeft);
 	fourthLevelRight.setTexture(fourthLevelTextureRight);
+
+	firstLevel.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+		firstLevelLeft.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+			firstLevelRightt.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+	secondLevel.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+		secondLevelLeft.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+			secondLevelRight.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+	thirdLevel.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+		thirdLevelLeft.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+			thirdLevelRight.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+	fourthLevel.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+		fourthLevelLeft.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+			fourthLevelRight.setScale(Tile::TILEWIDTH / 64.f, Tile::TILEHEIGHT / 64.f);
+
 }

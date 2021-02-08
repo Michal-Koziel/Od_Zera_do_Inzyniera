@@ -73,7 +73,7 @@ bool World::initNetwork() {
 		socket.send(packet, ip, port);
 		socket.send(packet, ip, port);
 		socket.send(packet, ip, port);
-		if (selector.wait(sf::seconds(60.f)))
+		if (selector.wait(sf::seconds(30.f)))
 		{
 			socket.receive(packet, ip2, port2);
 		}
@@ -184,7 +184,6 @@ void World::update(GameCamera* gameCamera) {
 		numberOfPoints += std::to_string(score + score2);
 		text.setString(numberOfPoints);
 
-
 		// Checking if player won or lost the game
 		if (gameCamera->getyOffset() <= 0 && player.getY() <= 738) {
 			wonGame(gameCamera);
@@ -240,9 +239,8 @@ void World::render(GameCamera* gameCamera) {
 		// Tiles 
 		int xStart = 0;
 		int xEnd = width;
-		std::max(0.0f, gameCamera->getyOffset() / Tile::TILEHEIGHT);
 		int yStart = std::max(0, (int)(gameCamera->getyOffset() / Tile::TILEHEIGHT));
-		int yEnd = std::min(height, (int)(gameCamera->getyOffset() / Tile::TILEHEIGHT + 21));
+		int yEnd = std::min(height, (int)(gameCamera->getyOffset() / Tile::TILEHEIGHT + 23));
 
 		for (int y = yStart;y < yEnd;y++) {
 			for (int x = xStart;x < xEnd;x++) {
@@ -465,7 +463,6 @@ void World::loadWorld(std::string path) {
 	for (int i = 0;i < width; i++) 
 		Worldtiles[i] = new int[height];
 	
-
 	for (int y = 0;y < height;y++) {
 		for (int x = 0;x < width;x++) {
 			Worldtiles[x][y] = Utils::parseInt(tokens[(x + width * y) + 4]);

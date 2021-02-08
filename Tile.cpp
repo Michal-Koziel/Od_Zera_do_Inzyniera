@@ -4,7 +4,7 @@
 // statics
 int Tile::TILEHEIGHT = 48;
 int Tile::TILEWIDTH = 48;
-Tile* Tile::tiles[32] = {};
+Tile* Tile::tiles[16] = {};
 
 // Constructors and destructor
 Tile::Tile() {

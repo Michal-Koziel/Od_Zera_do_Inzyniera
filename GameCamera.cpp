@@ -18,11 +18,10 @@ void GameCamera::Init(float width, float height) {
 // Functions
 
 void GameCamera::CheckBlankSpace() {
-	// Czy kamera wychodzi do góry
+	// If camera go beyond the map on top side
 	if (yOffset < 0)
 		yOffset = 0;
 
-	// w dó³
 	//if (yOffset + handler.getHeight() > handler.getWorld().getHeight()*Tiles::TILEHEIGHT)
 	//	yOffset = handler.getWorld().getHeight()*Tiles::TILEHEIGHT - handler.getHeight();
 }

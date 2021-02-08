@@ -23,6 +23,7 @@
     <ProjectGuid>{2459D9C2-4236-42AF-9886-CDAB15BB2894}</ProjectGuid>
     <RootNamespace>Gierka</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>Od zera do inżyniera</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

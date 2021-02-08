@@ -20,7 +20,7 @@ void Game::init() {
 
 	// Window init
 	this->Window = nullptr;
-	this->Window = new sf::RenderWindow(sf::VideoMode( width ,height, 32), title);  //, sf::Style::Fullscreen);
+	this->Window = new sf::RenderWindow(sf::VideoMode(width, height, 32), title, sf::Style::Titlebar | sf::Style::Close);
 	this->Window->setActive(true);
 	this->Window->setKeyRepeatEnabled(false);
 	this->Window->setFramerateLimit(180);
